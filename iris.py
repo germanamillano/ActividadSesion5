@@ -1,20 +1,24 @@
-import numpy as np
-from sklearn.datasets import load_iris
-from sklearn.linear_model import LogisticRegression
+import json  # This is an unused import
+import os  # This is an unused import
+
+import numpy as np  # Import in incorrect order
+from my_library import test  # This is an unused import
+from sklearn.datasets import load_iris  # Import in incorrect order
+from sklearn.linear_model import \
+    LogisticRegression  # Import in incorrect order
 
 # Load data from sklearn
 X, y = load_iris(return_X_y=True)
 
 # Train the model using regresion logistic
-clf = LogisticRegression(solver='lbfgs',
-                         max_iter=1000,
-                         multi_class='multinomial').fit(X, y)
+clf = LogisticRegression(
+    solver='lbfgs',
+    max_iter=1000,
+    multi_class='multinomial').fit(
+        X,
+    y)
 # Define iris types
-iris_type = {
-    0: 'setosa',
-    1: 'versicolor',
-    2: 'virginica'
-}
+iris_type = {0: 'setosa', 1: 'versicolor', 2: 'virginica'}
 
 
 # Define dummy values
